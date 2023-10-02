@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -87,6 +88,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -96,6 +98,10 @@
     }
   },
   "cli": {
+<<<<<<< Updated upstream
     "analytics": "f0abcdf2-8075-43c1-b15c-8bc217b13f96"
+=======
+    "analytics": "52812f63-81c9-44b8-8469-153cc19524c5"
+>>>>>>> Stashed changes
   }
 }
