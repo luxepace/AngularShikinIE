@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "EvoApp": {
+    "AngularShikinIE": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/evo-app",
+            "outputPath": "dist/angular-shikin-ie",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "EvoApp:build:production"
+              "browserTarget": "AngularShikinIE:build:production"
             },
             "development": {
-              "browserTarget": "EvoApp:build:development"
+              "browserTarget": "AngularShikinIE:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "EvoApp:build"
+            "browserTarget": "AngularShikinIE:build"
           }
         },
         "test": {
@@ -96,6 +96,6 @@
     }
   },
   "cli": {
-    "analytics": "f0abcdf2-8075-43c1-b15c-8bc217b13f96"
+    "analytics": "56f59a70-7d14-4768-9046-5da99180c027"
   }
 }
