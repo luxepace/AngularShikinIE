@@ -1,0 +1,11 @@
+<h3>
+  Товар: Гитара
+</h3>
+<hr />
+<button routerLink="details">Детали</button>
+<button routerLink="list">Список</button>
+<button routerLink="list" [queryParams]="{'list':'1', 'enable': true}">
+  Передача параметров
+</button>
+
+<router-outlet></router-outlet>
