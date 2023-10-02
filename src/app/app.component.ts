@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'EvoApp';
-  text = 'Hello';
+  testPipe = 4;
+  currentDate = new Date();
 }

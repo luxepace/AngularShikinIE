@@ -6,8 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent implements OnInit {
-  num = 1;
-  num1 = 1;
   song: string[] = [
     'Группа крови - на рукаве,',
     'Мой порядковый номер - на рукаве,',
@@ -19,11 +17,7 @@ export class ButtonComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void{
-    setInterval(() => {
-      this.num += 1;
-      this.num1 += 1;
-      if (this.num1 === 36) this.num1 = 1;
-    }, 1000)
+  
   }
 
 }

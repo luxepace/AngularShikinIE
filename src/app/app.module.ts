@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ButtonComponent } from './button/button.component';
+import { PipePlusFivePipe } from './pipePlusFive.pipe';
 
 @NgModule({
-  declarations: [	
+  declarations: [		
     AppComponent,
-      ButtonComponent
+      ButtonComponent,
+      PipePlusFivePipe
    ],
   imports: [
     BrowserModule
