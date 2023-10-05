@@ -1,0 +1,40 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Место работы (выключено)</mat-label>
+    <input matInput disabled value="Эволента">
+  </mat-form-field>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Имя</mat-label>
+      <input matInput>
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Фамилия</mat-label>
+      <input matInput>
+    </mat-form-field></td>
+  </tr></table>
+
+  <p>
+    <mat-form-field class="example-full-width">
+      <mat-label>Адрес</mat-label>
+      <textarea matInput placeholder="ул. Улица, д. 1, кв. 1"></textarea>
+    </mat-form-field>
+  </p>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Город</mat-label>
+      <input matInput placeholder="Саранск">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Район</mat-label>
+      <input matInput placeholder="Ленинский">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Почтовый индекс</mat-label>
+      <input matInput #postalCode maxlength="6" placeholder="Пример: 110011" value="222222">
+      <mat-hint align="end">{{postalCode.value.length}} / 6</mat-hint>
+    </mat-form-field></td>
+  </tr></table>
+</form>
