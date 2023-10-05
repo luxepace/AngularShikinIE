@@ -3,21 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BookComponent } from './book/book.component';
-import { MainComponent } from './main/main.component';
-import { BookService } from './book.service';
+import { InlineComponent } from './inline/inline.component';
 
 @NgModule({
-  declarations: [		
+  declarations: [			
     AppComponent,
-      BookComponent,
-      MainComponent
+      InlineComponent
    ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [BookService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

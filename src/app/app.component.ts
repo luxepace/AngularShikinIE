@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AngularShikinIE';
+  
+  constructor( private title: Title, private meta: Meta) {
+    this.title.setTitle('Desk Page'),
+    this.meta.addTag({ property: 'og:desc', content: 'root_desc' })
+  }
 }
