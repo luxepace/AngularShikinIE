@@ -1,15 +1,110 @@
 <br><br>
-<table>
-    <tr>
-        <td><b>userId</b></td>
-        <td><b>id</b></td>
-        <td><b>title</b></td>
-        <td><b>completed</b></td>
-    </tr>
-    <tr *ngFor="let testObject of responseService.testObjects">
-        <td>{{testObject.userId}}</td>
-        <td>{{testObject.id}}</td>
-        <td>{{testObject.title}}</td>
-        <td>{{testObject.completed}}</td>
-    </tr>
-</table>
+<h1 class="display-6 container m-5" class="text-center">Форма для добавления книг</h1>
+<form class="container my-auto">
+    <div class="mb-3">
+      <label class="form-label">Название книги</label>
+      <input
+        minlength="2"
+        maxlength="10"
+        pattern="[а-яА-ЯеЁ]*"
+        required
+        #bookTitle="ngModel"
+        name="name"
+        [(ngModel)]="create_book.bookTitle"
+        type="text"
+        class="form-control"
+      />
+  
+      <div *ngIf="bookTitle.invalid && (bookTitle.dirty || bookTitle.touched)">
+        <div
+          *ngIf="bookTitle.hasError('minlength')"
+          class="alert alert-danger mt-2"
+          role="alert"
+        >
+          Длина названия книги должна быть более двух символов
+        </div>
+        <div
+          *ngIf="bookTitle.hasError('required')"
+          class="alert alert-danger mt-2"
+          role="alert"
+        >
+          Поле не заполнено
+        </div>
+        <div
+          *ngIf="bookTitle.hasError('pattern')"
+          class="alert alert-danger mt-2"
+          role="alert"
+        >
+          Только русские буквы, без пробелов, без цифр, без спец. символов
+        </div>
+      </div>
+    </div>
+  
+    <div class="mb-3">
+      <label class="form-label">Автор</label>
+      <input
+        minlength="2"
+        maxlength="10"
+        pattern="[а-яА-ЯеЁ]*"
+        required
+        #author="ngModel"
+        name="second_name"
+        [(ngModel)]="create_book.author"
+        type="text"
+        class="form-control"
+      />
+  
+      <div *ngIf="author.invalid && (author.dirty || author.touched)">
+        <div
+          *ngIf="author.hasError('minlength')"
+          class="alert alert-danger mt-2"
+          role="alert"
+        >
+          Длина названия книги должна быть более двух символов
+        </div>
+        <div
+          *ngIf="author.hasError('required')"
+          class="alert alert-danger mt-2"
+          role="alert"
+        >
+          Поле не заполнено
+        </div>
+        <div
+          *ngIf="author.hasError('pattern')"
+          class="alert alert-danger mt-2"
+          role="alert"
+        >
+          Только русские буквы, без пробелов, без цифр, без спец. символов
+        </div>
+      </div>
+    </div>
+    <button
+      [disabled]="bookTitle.invalid || author.invalid"
+      (click)="createBook()"
+      type="submit"
+      class="btn btn-primary"
+    >
+      Добавить
+    </button>
+  </form>
+  
+  <div>
+    <h1 class="display-6 container m-5" class="text-center">Список книг</h1>
+    <table class="table table-striped container pt-10">
+      <thead>
+        <tr>
+          <th scope="col">Номер</th>
+          <th scope="col">Название книги</th>
+          <th scope="col">Автор</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ book.bookTitle }}</td>
+          <td>{{ book.author }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
