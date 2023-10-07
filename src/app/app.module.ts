@@ -5,13 +5,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { AppComponent } from './app.component';
-import { SliderComponent } from './slider/slider.component';
-import { InputComponent } from './Input/Input.component';
-import { ButtonComponent } from './button/button.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, BrowserAnimationsModule,  MatSlideToggleModule, SliderComponent,  InputComponent],
-  declarations: [	AppComponent, ButtonComponent  ],
+  imports:      [ BrowserModule, FormsModule, BrowserAnimationsModule,  MatSlideToggleModule ],
+  declarations: [	AppComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

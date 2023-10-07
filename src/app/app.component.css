@@ -1,18 +1,27 @@
-.example-h2 {
-  margin: 10px;
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
 }
 
-.example-section {
-  display: flex;
-  align-content: center;
-  align-items: center;
-  height: 60px;
+thead th:nth-child(1) {
+  width: 30%;
 }
 
-.example-margin {
-  margin: 0 10px;
+thead th:nth-child(2) {
+  width: 20%;
 }
 
-.example-card {
-  margin-bottom: 10px;
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th,
+td {
+  padding: 20px;
 }

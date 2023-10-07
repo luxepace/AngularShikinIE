@@ -1,6 +1,15 @@
 <br><br>
-<app-Input></app-Input>
-<br><br>
-<app-slider></app-slider>
-<br><br>
-<app-button></app-button>
+<table>
+    <tr>
+        <td><b>userId</b></td>
+        <td><b>id</b></td>
+        <td><b>title</b></td>
+        <td><b>completed</b></td>
+    </tr>
+    <tr *ngFor="let testObject of responseService.testObjects">
+        <td>{{testObject.userId}}</td>
+        <td>{{testObject.id}}</td>
+        <td>{{testObject.title}}</td>
+        <td>{{testObject.completed}}</td>
+    </tr>
+</table>
