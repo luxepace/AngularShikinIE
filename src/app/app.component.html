@@ -1,0 +1,6 @@
+<div class="example-button-row">
+  <button mat-raised-button color="primary" (click)="addComponent()">Добавить динамический компонент</button>
+  <button mat-raised-button color="warn" (click)="deleteComponent()">Очистка шаблона</button>
+</div>
+<ng-container *ngTemplateOutlet="dynamicComponent"></ng-container>
+<ng-template #dynamicComponent></ng-template>

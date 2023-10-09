@@ -1,0 +1,18 @@
+<table class="table table-striped container pt-10">
+  <thead>
+    <tr>
+      <td><b>Позиция</b></td>
+      <td><b>Название</b></td>
+      <td><b>Вес</b></td>
+      <td><b>Символ</b></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let testObject of testObjects">
+      <td>{{ testObject.position }}</td>
+      <td>{{ testObject.name }}</td>
+      <td>{{ testObject.weight }}</td>
+      <td>{{ testObject.symbol }}</td>
+    </tr>
+  </tbody>
+</table>
