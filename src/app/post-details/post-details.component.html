@@ -1,0 +1,27 @@
+<h3>Список постов</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">UserId</th>
+      <th scope="col">Название</th>
+      <th scope="col">Текст поста</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{ post.id }}</th>
+      <td>{{ post.userId }}</td>
+      <td>{{ post.title }}</td>
+      <td>{{ post.body }}</td>
+    </tr>
+    <tr>
+      <td><input name="id" [(ngModel)]="post.id" disabled/></td>
+      <td><input name="userId" [(ngModel)]="post.userId" /></td>
+      <td><input name="title" [(ngModel)]="post.title" /></td>
+      <td><input name="body" [(ngModel)]="post.body" /></td>
+    </tr>
+  </tbody>
+</table>
+<button class="btn btn-default" (click)="saveChanges()" routerLink="/postlist">Сохранить</button>
